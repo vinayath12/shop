@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+   {% if category %}
+      {{category.description|truncatewords:155}}
+   {% else %}
+       welcome to orlando shop...
+   {% endif %}
+{% endblock %}
+{% block title %}
+      {% if category %}
+      {{category.name}}
+   {% else %}
+       see our new collections...
+   {% endif %}
+{% endblock %}
+{% block content %}
+{% if category %}
+<div>
+<div class="row my_row">
+    <div class="mx-auto">
+    <p><a href="{% url 'shopapp:allproduct' %}">all products</a></p>
+    </div>
+</div>
+</div>
+{% endif %}
+<div class="mx-auto">
+    {% if category %}
+    <img  src="{{category.image.url}}" class="my_image">
+</div>
+<br>
+<div>
+    <h1 class="text-center my_title">{{category.name}}</h1>
+    <p class="text-justify">{{category.description}}</p>
+</div>
+{% else %}
+<div>
+    <img src="{% static 'img/ban.png' %}" style="width:1116px" height="500px">
+</div>
+<br>
+<div>
+    <h1 class="text-center my_title">welcome to our collections</h1>
+    <p class="text-justify my_para">The study found that people who wear well-kept shoes exhibit high levels of attachment anxiety. ... In addition to being more extroverted, the study found that those who wear worn shoes tend to be emotionally stable. They don't get bogged down by what others think about them.21-N</p>
+</div>
+ {% endif %}
+<div class="container">
+    <div class="row mx-auto">
+
+      {% for pro in product.object_list %}
+       <div class="my_bottom_margin col-9 col-sm-12 col-md-4 xol-lg-4">
+        <div class="card text-center" style="width:18rem;">
+            <a href="{{pro.get_url}}"><img class="card-img-top" src="{{pro.image.url}}" width="150px"></a>
+        <div class="card-body">
+           <h2 class="card-title">{{pro.name}}</h2>
+            <p>{{pro.price}}</p>
+        </div>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="mx-auto">
+                {% if product.paginator.num_pages > 1 %}
+                <hr>
+                <div class="text-center">
+                    {% for pg in product.paginator.page_range %}
+                       <a href="?page={{pg}}" class="btn btn-light btn-sm {% if product.number == pg %} active {% endif %}">{{pg}}</a>
+                    {% endfor %}
+                </div>
+                {% endif %}
+    </div>
+    <br>
+
+</div>
+{% endblock %}

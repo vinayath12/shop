@@ -1,0 +1,130 @@
+body{
+     font-family: 'Roboto Condensed', sans-serif;
+}
+
+.nav-item{
+  text-transform:uppercase;
+
+  font-size:13px;
+  font-weight:600;
+  }
+  .dropdown-item{
+      text-transform:uppercase;
+
+font-size:13px;
+font-weight:600;
+  }
+  .my_footer{
+  background-color:lavender;
+  height:30px;
+     }
+  .my_footer p{
+        padding-top:10px;
+        font-size:13px;
+  }
+  .my_row{
+  padding-top:20px;
+   }
+   .my_row .mx-auto{
+      background-color:black;
+      font-size:12px;
+   }
+   .my_image{
+         width:100%;
+         height:auto;
+   }
+   .my_title{
+   font-size:20px;
+   font-weight:600;
+   text-transform:capitalize;
+   letter-spacing:.1rem;
+   padding-top:40px;
+   color:gray;
+
+
+   }
+   .card-body h2,.card-body p{
+    font-size:16px;
+   font-weight:600;
+
+   letter-spacing:.1rem;
+   }
+
+    .my_para{
+   font-size:13px;
+   font-weight:500;
+    padding-top:20px;
+    letter-spacing:1px;
+   color:black;
+   padding-bottom:40px;
+
+
+   }
+   .my_bottom_margin{
+   margin-bottom:10px;
+   }
+
+   .card{
+      margin-left:30px;
+   }
+   .pro_row .mx-auto {
+
+   font-size:14px;
+   font-weight:600
+
+   }
+   .mx-auto a{
+   color:orange;
+    text-decoration:none;}
+
+   .pro_name ,p{
+       font-size:18px;
+     font-weight:600;
+     text-transform:capitalize;
+     color:gray;
+
+
+    }
+    .pro_des{
+       font-size:15px;
+       font-weight500;
+       color:gray;
+    }
+    .my_text{
+        color:black;
+
+     }
+     .mytable{
+       min-width:400px;
+       font-size:12px;
+       border-collapse:separate;
+       border-spacing:0 1rem;
+     }
+     .sids{
+        padding-left:20px;
+        margin-left:20px;
+     }
+     .my_custom_thead{
+     font-weight:none;
+     text-transform:capitalize;
+     letter-spacing:.2rem;
+     background-color:#F8F9FB;
+     }
+#head{
+     font-size:20px;
+     font-weight:600px;
+     text-transform:capitalize;
+     color:gray;
+     padding:20px;
+}
+.text{
+     font-size:13px;
+     font-weight:600px;
+     text-transform:capitalize;
+     padding-down:15px
+
+}
+.dropdown-item{
+    font-size:16px;
+    text-transform:capitalize;
+}
